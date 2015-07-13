@@ -1925,18 +1925,15 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 2px solid #167D5F;
-  margin: 5% auto;
-  padding: 0.35em 0.625em 0.75em;
-  width: 60%;}
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 legend {
-  font-family: 'Nunito', sans-serif;
-  font-size: 20px;
   border: 0;
   /* 1 */
   padding: 0;
@@ -2178,7 +2175,7 @@ ul.staggered-list li {
 
 footer.page-footer {
   margin-top: 20px;
- /* padding-top: 20px;*/
+  padding-top: 20px;
   background-color: #1565C0; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
@@ -5792,7 +5789,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #1565C0;
+  background-color: #26a69a;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -6187,27 +6184,25 @@ button:focus {
   background-color: #2ab7a9; }
 
 label {
-  font-family: 'Nunito', sans-serif;
-  /*font-size: 0.8rem;
-  color: #9e9e9e; */
-}
+  font-size: 0.8rem;
+  color: #9e9e9e; }
 
 /***************************
    Text Inputs + Textarea
 ****************************/
 ::-webkit-input-placeholder {
-  color: #2329EA; }
+  color: #d1d1d1; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #2329EA; }
+  color: #d1d1d1; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #2329EA; }
+  color: #d1d1d1; }
 
 :-ms-input-placeholder {
-  color:#2329EA;; }
+  color: #d1d1d1; }
 
 input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
   background-color: transparent;
@@ -6333,8 +6328,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
 textarea {
   width: 100%;
   height: 3rem;
-  background-color: transparent;
-  margin-bottom: 1%;}
+  background-color: transparent; }
   textarea.materialize-textarea {
     overflow-y: hidden;
     /* prevents scroll bar flash */
