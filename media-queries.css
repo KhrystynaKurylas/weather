@@ -3,9 +3,14 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 4% 0 2% 19%;
+        background-color: #1565C0;
+        text-align: center;
+        padding: 1%;
+        font-size: 30px;
+        color: white;
+        border-radius: 15%;
     }
     #umbrella {
         border: none;
@@ -29,9 +34,9 @@
      #location{
          width: 200px;
          height: 70px;
-         background-color: #03a9f4;
          position: relative;
          margin: 4% 0 3% 32%;
+
      }
      #umbrella {
          border: none;
@@ -55,9 +60,9 @@
      #location{
          width: 200px;
          height: 70px;
-         background-color: #03a9f4;
          position: relative;
          margin: 4% 0 3% 31%;
+
      }
      #umbrella {
          border: none;
@@ -72,10 +77,11 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 2% 0 2% 35%;
+
     }
+
     #umbrella {
         border: none;
         height: 266px;
@@ -98,9 +104,9 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 2% 0 2% 37%;
+
     }
     #umbrella {
         border: none;
@@ -115,18 +121,18 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 2% 0 2% 39%;
+
     }
  }
  @media screen  and (min-width: 980px) {
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
-        margin: 2% 0 2% 42%
+        margin: 2% 0 2% 42%;
+
     }
     #forecast1{
        margin: 1% 2% 1% 13%
@@ -137,9 +143,14 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 2% 0 2% 39%;
+        background-color: #1565C0;
+        text-align: center;
+        padding: 1%;
+        font-size: 30px;
+        color: white;
+        border-radius: 15%;
     }
     #umbrella {
         border: none;
@@ -163,9 +174,9 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 4% 0 4% 41%;
+
     }
     #umbrella {
         border: none;
@@ -183,9 +194,9 @@
     #location{
         width: 200px;
         height: 70px;
-        background-color: #03a9f4;
         position: relative;
         margin: 2% 0 3% 44%;
+
     }
     #umbrella {
         border: none;
