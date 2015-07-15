@@ -1,10 +1,8 @@
  @media  screen  and (min-width: 320px)
  {
     #location{
-        width: 200px;
-        height: 70px;
         position: relative;
-        margin: 4% 0 2% 19%;
+        margin: 4% 0 2% 0;
         background-color: #1565C0;
         text-align: center;
         padding: 1%;
@@ -31,19 +29,7 @@
     }
  }
  @media  screen  and (min-width: 540px){
-     #location{
-         width: 200px;
-         height: 70px;
-         position: relative;
-         margin: 4% 0 3% 32%;
-
-     }
      #umbrella {
-         border: none;
-         height: 266px;
-         width: 200px;
-         position: relative;
-         float: right;
          margin: 0 25% 3% 0;
      }
      #forecast1{
@@ -57,37 +43,15 @@
      }
  }
  @media  screen  and (min-width: 564px){
-     #location{
-         width: 200px;
-         height: 70px;
-         position: relative;
-         margin: 4% 0 3% 31%;
-
-     }
      #umbrella {
-         border: none;
-         height: 266px;
-         width: 200px;
-         position: relative;
-         float: right;
          margin: 0 31% 3% 0;
      }
  }
  @media  screen  and (min-width: 768px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 2% 35%;
-
+        margin: 2% 14% 2% 14%;
     }
-
     #umbrella {
-        border: none;
-        height: 266px;
-        width: 200px;
-        position: relative;
-        float: right;
         margin: 0 32% 2% 8%;
     }
     #forecast1{
@@ -102,62 +66,27 @@
  }
 @media  screen  and (min-width: 800px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 2% 37%;
-
+        margin: 2% 15% 2% 15%;
     }
     #umbrella {
-        border: none;
-        height: 266px;
-        width: 200px;
-        position: relative;
-        float: right;
         margin: 0 35% 2% 8%;
     }
  }
  @media  screen  and (min-width: 960px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 2% 39%;
-
+        margin: 2% 15% 2% 15%;
     }
  }
  @media screen  and (min-width: 980px) {
-    #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 2% 42%;
-
-    }
     #forecast1{
        margin: 1% 2% 1% 13%
     }
-
  }
  @media  screen  and (min-width: 1024px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 2% 39%;
-        background-color: #1565C0;
-        text-align: center;
-        padding: 1%;
-        font-size: 30px;
-        color: white;
-        border-radius: 15%;
+        margin: 2% 27% 2% 0;
     }
     #umbrella {
-        border: none;
-        height: 266px;
-        width: 200px;
-        position: relative;
-        float: right;
         margin: -9% 0 0 0;
     }
     #forecast1{
@@ -172,19 +101,10 @@
  }
  @media  screen  and (min-width: 1280px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 4% 0 4% 41%;
-
+        margin: 4% 20% 4% 20%;
     }
     #umbrella {
-        border: none;
-        height: 266px;
-        width: 200px;
-        position: relative;
-        float: right;
-        margin: -14% 0 0 0;
+        margin: -12% 0 0 0;
     }
     #forecast1{
         margin: 0 2% 1% 20%;
@@ -192,18 +112,9 @@
  }
  @media  screen  and (min-width: 1920px) {
     #location{
-        width: 200px;
-        height: 70px;
-        position: relative;
-        margin: 2% 0 3% 44%;
-
+        margin: 2% 29% 3% 28%;
     }
     #umbrella {
-        border: none;
-        height: 266px;
-        width: 200px;
-        position: relative;
-        float: right;
         margin: -5% 7% 0 0
     }
     #forecast1{
