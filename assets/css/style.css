@@ -28,7 +28,47 @@ main {
     flex: 1 0 auto;
 }
 
-
+form{
+    position:relative;
+    top: 15%;
+    left: 20%;
+    float: none;
+    width: 60%;
+    height: 50%;
+}
+legend{
+    padding:0 0 0 10px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+fieldset{
+    left: 0;
+    border: 3px groove #1B21C7;
+    background-color: #BBDEFB;
+}
+label{
+    font-size: 18px;
+    padding: 10px 0 0 15px;
+    font-family: 'Nunito', sans-serif;
+}
+#name{
+    width:200px;
+    height: 30px;
+    margin: 10px 0 5px 10px;
+}
+#email{
+    width:200px;
+    height: 30px;
+    margin: 10px 0 10px 9px;
+}
+#feedback{
+    margin: 10px 0 10px 20px;
+}
+#submit{
+    width:80px;
+    height: 30px;
+    margin: 10px 0 10px 20px;
+}
 #forecast figure img {
     /* margin: 1% 4%;*/
     float: left;
