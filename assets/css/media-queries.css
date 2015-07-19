@@ -1,6 +1,12 @@
  @media  screen  and (min-width: 320px)
  {
-    #location{
+     #weather{
+         position:relative;
+         width:300px;
+         height:400px;
+         overflow:hidden;
+     }
+     #location{
         position: relative;
         margin: 4% 0 2% 0;
         background-color: #1565C0;
@@ -29,6 +35,10 @@
     }
  }
  @media  screen  and (min-width: 540px){
+     #weather{
+        margin: 0 20% 5%;
+     }
+
      #umbrella {
          margin: 0 25% 3% 0;
      }
@@ -43,11 +53,17 @@
      }
  }
  @media  screen  and (min-width: 564px){
+     #weather{
+
+     }
      #umbrella {
          margin: 0 31% 3% 0;
      }
  }
  @media  screen  and (min-width: 768px) {
+     #weather{
+         margin: 0 30% 5%;
+     }
     #location{
         margin: 2% 14% 2% 14%;
     }
@@ -65,6 +81,9 @@
     }
  }
 @media  screen  and (min-width: 800px) {
+    #weather{
+        margin: 0 30% 5%;
+    }
     #location{
         margin: 2% 15% 2% 15%;
     }
@@ -73,21 +92,30 @@
     }
  }
  @media  screen  and (min-width: 960px) {
+     #weather{
+         margin: 0 35% 5%;
+     }
     #location{
         margin: 2% 15% 2% 15%;
     }
  }
  @media screen  and (min-width: 980px) {
+     #weather{
+         margin: 0 35% 5%;
+     }
     #forecast1{
        margin: 1% 2% 1% 13%
     }
  }
  @media  screen  and (min-width: 1024px) {
+     #weather{
+         margin: 0 20% 5%;
+     }
     #location{
         margin: 2% 27% 2% 0;
     }
     #umbrella {
-        margin: -9% 0 0 0;
+        margin: -6% 0 0 0;
     }
     #forecast1{
         margin: 0 2% 1% 0;
@@ -100,17 +128,23 @@
     }
  }
  @media  screen  and (min-width: 1280px) {
+     #weather{
+         margin: 0 36% 5%;
+     }
     #location{
         margin: 4% 20% 4% 20%;
     }
     #umbrella {
-        margin: -12% 0 0 0;
+        margin: -9% 0 0 0;
     }
     #forecast1{
         margin: 0 2% 1% 20%;
     }
  }
  @media  screen  and (min-width: 1920px) {
+     #weather{
+         margin: 0 41% 5%;
+     }
     #location{
         margin: 2% 29% 3% 28%;
     }
