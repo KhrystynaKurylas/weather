@@ -2188,7 +2188,7 @@ footer.page-footer {
     background-color: rgba(51, 51, 51, 0.08); }
 
 table, th, td {
-  border: none; }
+  border: 2px solid #167D5F; }
 
 table {
   width: 100%;
@@ -2214,11 +2214,11 @@ thead {
   border-bottom: 1px solid #d0d0d0; }
 
 td, th {
-  padding: 15px 5px;
+  padding: 1px 5px;
   display: table-cell;
-  text-align: left;
   vertical-align: middle;
   border-radius: 2px; }
+
 
 @media only screen and (max-width : 992px) {
   table.responsive-table {

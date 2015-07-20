@@ -325,4 +325,24 @@ height: 400px;
     position: absolute;
     padding: 0 30px;
 }
-
+table, th, td{
+    border: 3px  groove #1B21C7;
+}
+caption{
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+th {
+    background-color: #1b21c7;
+    color: white;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+td{
+    padding: 2px;
+    text-align: center;
+}
+.odd{
+    color: #000000;
+}
