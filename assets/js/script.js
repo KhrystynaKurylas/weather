@@ -36,7 +36,7 @@ $(function(){
 		switch(icon) {
 			case '01d' :image='<div><div class="animated rotateInSun"><img src="assets/img/icons/sun.png" alt="sun"></div></div>';
 				break;
-			case '01n': image='<div><div class="animated rotateInMoon"><figure><img src="assets/img/icons/moon.png" alt="moon"></figure></div></div>';
+			case '01n': image='<div><div id="moonRotate" class="animated rotateInMoon"><figure><img src="assets/img/icons/moon.png" alt="moon"></figure></div></div>';
 				break;
 			case '02d': image='<div><div class="animated rotateInSun"><img  src="assets/img/icons/sun.png" alt="sun"></div><img id="cloudmini" src="assets/img/icons/cloudmini.png" alt="cloud"></div>';
 				break;

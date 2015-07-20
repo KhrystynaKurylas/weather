@@ -301,6 +301,10 @@ height: 400px;
     position: absolute;
     margin : -20px 0 0 0;
 }
+#moonRotate{
+    position: absolute;
+    margin : -20px 0 0px -40px;
+}
 #snow{
     position: absolute;
     padding: 0 30px;
