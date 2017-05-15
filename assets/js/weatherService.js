@@ -8,7 +8,7 @@ function getWeatherData(lang, fnOK, fnError) {
             fnOK.call(this, cache.data);
         } else {
             $.getJSON(
-               'http://api.openweathermap.org/data/2.5/forecast?q=Lviv,ua&cnt=16&units=metric&lang=uk&callback=?&appid=9649c92439ade00fa8117dec4613064b',
+               'http://api.openweathermap.org/data/2.5/forecast?q=Lviv,ua&units=metric&lang=uk&callback=?&appid=9649c92439ade00fa8117dec4613064b',
                 function (response) {
                     // Store the cache
                     localStorage.weatherCache = JSON.stringify({
