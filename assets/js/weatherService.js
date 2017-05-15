@@ -1,4 +1,5 @@
- function locSuccess(position) {
+function getWeatherData(lang, fnOK, fnError) {
+  function locSuccess(position) {
         // Check cache
         var cache = localStorage.weatherCache && JSON.parse(localStorage.weatherCache);
         var currDate = new Date();
@@ -20,5 +21,7 @@
             );
         }
     }
+ 
+}
 
     
