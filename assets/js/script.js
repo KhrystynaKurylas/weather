@@ -5,7 +5,7 @@ $(function(){
 		scroller = $('#scroller'),
 		location = $('#location');
 
-	getWeatherData(locale, dataReceived, showError);
+	getWeatherData(locale, dataReceived,);
 
 	function dataReceived(data) {
 		// Get the offset from UTC (turn the offset minutes into ms)
