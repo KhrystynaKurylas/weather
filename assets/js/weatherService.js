@@ -1,5 +1,6 @@
 function getWeatherData(lang, fnOK) {
-  function locSuccess(position) {
+var city = "Lviv"
+  function locSuccess(lang,city) {
         // Check cache
         var cache = localStorage.weatherCache && JSON.parse(localStorage.weatherCache);
         var currDate = new Date();
@@ -8,7 +9,7 @@ function getWeatherData(lang, fnOK) {
             fnOK.call(this, cache.data);
         } else {
             $.getJSON(
-               'http://api.openweathermap.org/data/2.5/forecast?q=Lviv,ua&units=metric&city.name&city.country&lang=uk&callback=?&appid=9649c92439ade00fa8117dec4613064b',
+               'http://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&city.name&city.country&lang='+lang+'uk&callback=?&appid=9649c92439ade00fa8117dec4613064b',
                 function (response) {
                     // Store the cache
                     localStorage.weatherCache = JSON.stringify({
@@ -16,12 +17,10 @@ function getWeatherData(lang, fnOK) {
                         data: response
                     });
                     // Call the function again
-                    locSuccess(position);
+                    locSuccess(lang,city);
                 }
             );
         }
     }
  
 }
-
-    
