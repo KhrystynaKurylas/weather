@@ -1,12 +1,18 @@
 $(".button-collapse").sideNav();
 $(function(){
-	var locale = 'ua',
-		weatherDiv = $('#weather'),
-		scroller = $('#scroller'),
-		location = $('#location');
-		
-
-	getWeatherData(locale, dataReceived, showError);
+	$('#btnGetWeather').click(function () {
+        getWeatherByCity('ua', dataReceived, showError, $('#inputCityName').val());
+    });
+    $('#inputCityName').keypress(function(e) {
+        var ENTER_KEY_CODE = 13;
+        if ( e.which === ENTER_KEY_CODE ) 
+        {
+            $('#btnGetWeather').trigger('click');
+            return false;
+        }
+    });    
+    
+    getWeatherData('ua', dataReceived, showError);
 
 	function dataReceived(data) {
 		// Get the offset from UTC (turn the offset minutes into ms)
