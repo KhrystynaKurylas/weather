@@ -1,4 +1,4 @@
-function getWeatherData(lang, fnOK, fnError) {
+function getWeatherData(lang, fnOK) {
   function locSuccess(position) {
         // Check cache
         var cache = localStorage.weatherCache && JSON.parse(localStorage.weatherCache);
