@@ -5,7 +5,7 @@ $(function(){
 		scroller = $('#scroller'),
 		location = $('#location');
 
-	getWeatherData(locale, dataReceived,showError);
+	getWeatherData();
 
 
 	function addWeather(icon, dt_txt, main){
