@@ -1,5 +1,4 @@
 function getWeatherData(lang, fnOK) {
-var city = "Lviv"
   function locSuccess(lang,city) {
         // Check cache
         var cache = localStorage.weatherCache && JSON.parse(localStorage.weatherCache);
