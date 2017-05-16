@@ -1,5 +1,9 @@
 $(".button-collapse").sideNav();
 $(function(){
+	var locale = 'ua',
+		weatherDiv = $('#weather'),
+		scroller = $('#scroller'),
+		location = $('#location');
 	$('#btnGetWeather').click(function () {
         getWeatherByCity('ua', dataReceived, showError, $('#inputCityName').val());
     });
