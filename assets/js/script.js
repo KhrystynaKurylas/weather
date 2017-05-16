@@ -7,30 +7,8 @@ $(function(){
 
 	getWeatherData(locale, dataReceived,showError);
 
-	function dataReceived(data) {
-		// Get the offset from UTC (turn the offset minutes into ms)
-		var offset = (new Date()).getTimezoneOffset()*60*1000;
-		var city = 'Lviv';
-		var country = 'UA';
 
-		$.each(data.list, function(){
-			// "this" holds a forecast object
-			// Get the local time of this forecast (the api returns it in utc)
-			var localTime = new Date(this.dt*1000 - offset);
-			addWeather(
-				this.weather[0].icon,
-				moment(localTime).locale("uk").calendar(),	// We are using the moment.js library to format the date
-				this.weather[0].description + ' <b>' + Math.round(this.main.temp) + '°C' + '</b>'
-			);
-		});
-		// Add the location to the page
-		location.html(city+', <b>'+country+'</b>');
-		weatherDiv.addClass('loaded');
-		// Set the slider to the first slide
-		showSlide(0);
-	}
-
-	function addWeather(icon, day, condition){
+	function addWeather(icon, dt_txt, main){
 
 		var image;
 		switch(icon) {
@@ -71,7 +49,7 @@ $(function(){
 			case'50n':image='<div><img id="fog" src="assets/img/icons/clouds.png" alt="cloud"><figure class="animated fadeInLeft"><img src="assets/img/icons/fog.png" alt="fog"> </figure></div>';
 				break;
 		}
-		var markup =  '<li>' + image + '<p class="day">'+ day +'</p>'+ '<p class="cond">'+ condition +'</p></li>';
+		var markup =  '<li>' + image + '<p class="day">'+ dt_txt +'</p>'+ '<p class="cond">'+ main +'</p></li>';
 		scroller.append(markup);
 
 	}
