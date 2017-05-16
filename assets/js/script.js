@@ -10,8 +10,8 @@ $(function(){
 	function dataReceived(data) {
 		// Get the offset from UTC (turn the offset minutes into ms)
 		var offset = (new Date()).getTimezoneOffset()*60*1000;
-		var city = data.city.name;
-		var country = data.city.country;
+		var city = 'Lviv';
+		var country = 'UA';
 
 		$.each(data.list, function(){
 			// "this" holds a forecast object
