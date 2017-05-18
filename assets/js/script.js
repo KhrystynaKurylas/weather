@@ -29,9 +29,9 @@ $(function(){
 			// Get the local time of this forecast (the api returns it in utc)
 			var localTime = new Date(this.dt*1000 - offset);
 			addWeather(
-				this.weather[1].icon,
+				this.weather[0].icon,
 				moment(localTime).locale("uk").calendar(),	// We are using the moment.js library to format the date
-				this.weather[1].description + ' <b>' + Math.round(this.main.temp) + '°C' + '</b>'
+				this.weather[0].description + ' <b>' + Math.round(this.main.temp) + '°C' + '</b>'
 			);
 		});
 		// Add the location to the page
