@@ -24,14 +24,14 @@ $(function(){
 		var city = data.city.name;
 		var country = data.city.country;
 
-		$.each(data.list[1], function(){
+		$.each(data.list, function(){
 			// "this" holds a forecast object
 			// Get the local time of this forecast (the api returns it in utc)
 			var localTime = new Date(this.dt*1000 - offset);
 			addWeather(
-				this.weather.icon,
+				this.weather[0].icon,
 				moment(localTime).locale("uk").calendar(),	// We are using the moment.js library to format the date
-				this.weather.description + ' <b>' + Math.round(this.main.temp) + '°C' + '</b>'
+				this.weather[0].description + ' <b>' + Math.round(this.main.temp) + '°C' + '</b>'
 			);
 		});
 		// Add the location to the page
