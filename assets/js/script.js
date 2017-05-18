@@ -24,7 +24,7 @@ $(function(){
 		var city = data.city.name;
 		var country = data.city.country;
 
-		$.each(data.list, function(){
+		$.each(data.list[0], function(){
 			// "this" holds a forecast object
 			// Get the local time of this forecast (the api returns it in utc)
 			var localTime = new Date(this.dt*1000 - offset);
