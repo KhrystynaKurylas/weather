@@ -3,71 +3,100 @@
 <head lang="en">
     <meta charset="UTF-8">
     <!-- The Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" media="screen,projection" />
-   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-    <link href="assets/css/media-queries.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <!-- <link href="assets/css/media-queries.css" rel="stylesheet" type="text/css"> -->
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- The Material Icons -->
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
-    <![endif]-->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.waterwheelCarousel.min.js"></script>
+  
+    <!--[if lt IE 9]
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>-->
     <title>Прогноз погоди</title>
+	
 </head>
 <body>
- <main>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center">Прогноз погоди</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.html">Головна</a></li>
-                <li><a href="feedback.html">Зворотній зв'язок</a></li>
-                <li><a href="about.html">Про сайт</a></li>
-                <li><a href="daily.html">16 днів</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li class="active"><a href="index.html">Головна</a></li>
-                <li><a href="feedback.html">Зворотній зв'язок</a></li>
-                <li><a href="about.html">Про сайт</a></li>
-                <li><a href="daily.html">16 днів</a></li>
-            </ul>
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Прогноз погоди</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Головна</a></li>
+                    <li><a href="feedback.html">Зворотній зв'язок</a></li>
+                    <li><a href="about.html">Про сайт</a></li>
+                    <li><a href="daily.html">16 днів</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <!--location-->
-     <form id="formCity">
+</header>
+    <main>  <!--location-->
+	<div class="conteiner">
+    <div class="row forecast">
+        <div id="first" class="col-md-4 col-xs-12">
+	    <h2>
+            <span>What's </span>
+            <span>the forecast</span>
+            <span>like?</span>
+        </h2>
+            <div class="umbrella">
+                    <img src="assets/img/umbrella.png" alt="umbrella">
+            </div>
+		</div>
+        <div id="second" class="col-md-4 col-xs-12">
+		<h2>
+            <span>Please </span>
+            <span>enter city</span>
+            <span>name:</span>
+        </h2>
+            <form>
+            <div class="form-group">
             <label for="cityName">Enter city name:</label>
-            <input id="inputCityName" type="text" name="cityName"/>
-            <input type="button" id="btnGetWeather" value="Get Weather"/>
-        </form>
-    <div id="location"></div>
-    <figure id="umbrella">
-        <img src="assets/img/umbrella.png" alt="umbrella">
-    </figure>
-    <div id="line"></div>
-
-         <div id="weather" >
-
-            <ul id="scroller" class="z-depth-4" class="col s12 m2">
+            <input id="inputCityName" type="text" name="cityName" class="form-control">
+            <input type="button" id="btnGetWeather" value="Get Weather" class="form-control">
+        </div>
+            </form>
+		</div>
+        <div id="third" class="col-md-4 col-xs-12">
+		<h2>
+            <span>See</span>
+            <span>weather</span>
+            <span>forecast:</span>
+        </h2>
+		     <div id="location"></div>
+			 <div id="weather" >
+            <ul id="scroller">
             </ul>
              <a href="#" class="arrow previous">Previous</a>
              <a href="#" class="arrow next">Next</a>
          </div>
-
- </main>
-<footer class="page-footer">
-    <div class="container"></div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2015, Прогноз погоди
-        </div>
+		</div>
     </div>
+</div>
+ </main>
+<footer>
+    <div class="container">
+        <div class="row copyright">
+            © 2015, Прогноз погоди    
+        </div>
+	</div>
 </footer>
+
+
 <!--jquery-->
- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
  <script src="assets/js/moment-with-locales.js"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/js/weatherService.js"></script>
  <script type="text/javascript" src="assets/js/script.js"></script>
 </body>

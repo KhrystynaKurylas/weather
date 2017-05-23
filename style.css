@@ -1,0 +1,453 @@
+/*----------------------------
+	Reset Setup
+-----------------------------*/
+*{
+    margin:0;
+    padding:0;
+}
+/*----------------------------
+	General
+-----------------------------*/
+body{
+    background-color: #5DCFC3;
+}
+header{
+  /*  background-image: url("assets/img/bg_header.jpg");
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    box-sizing:border-box;
+    position: relative; */
+}
+h1{
+    text-align: center;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-inverse {
+    background-color: #080B74;
+    border-color: #080B74;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #303285;
+    font-size: 20px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-size: 14px;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #FFCE40;
+    background-color: transparent;
+    font-size: 14px;
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#carousel {
+    width:960px;
+    margin:0 auto;
+    height:300px;
+    position:relative;
+    clear:both;
+    overflow:hidden;
+
+}
+#carousel img {
+    visibility:hidden; /* hide images until carousel can handle them */
+    cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+}
+
+main {
+    background-color: #5DCFC3;;
+}
+.forecast{
+    box-shadow:0 0 5px rgba(0,0,0,0.15);
+    height: 600px;
+}
+h2, h2 span {
+    display: block;
+}
+h2{
+    text-align: center;
+}
+h2 span:nth-child(1) {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+h2 span:nth-child(2) {
+    margin: 5px 0 0 100px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h2 span:nth-child(3) {
+    margin: 0 0 70px 150px;
+    font-size: 32px;
+    font-weight: 700;
+}
+.umbrella{
+    width: 220px;
+    margin: 0 auto;
+    display: block;
+}
+form{
+    margin: 20px auto 0 150px;
+    width: 320px;
+}
+.form-control{
+    margin: 20px auto;
+}
+#first{
+    background-color: #4577D4;
+    height: 600px;
+
+}
+#first:after {
+    content: "";
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 70px solid transparent;
+    position: absolute; right: -70px; top: 0;
+ }
+#second{
+    background-color: #FFBC40;
+    height: 600px;
+}
+#second:before{
+    content: "";
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 70px solid #4577D4;
+    position: absolute; left: 0; top: 0;
+}
+#second::after{
+    content: "";
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 70px solid transparent;
+    position: absolute; right: -50px; top: 0;
+}
+#location{
+    color: #000000;
+    background-color: #4577D4;
+    width: 300px;
+    margin: 0 0 2% 25%;
+    text-align: center;
+    height: 40px;
+    border-radius:3px;
+    box-shadow:0 0 5px rgba(0,0,0,0.15);
+    font-size: 30px;
+    display: none;
+
+}
+#weather{
+    position:relative;
+    width:300px;
+    height:300px;
+    overflow:hidden;
+    margin: 0 0 0 25%;
+}
+#weather:before{
+     background: url("assets/img/preloader.gif") no-repeat center center;
+     content: "";
+     height: 44px;
+     left: 50%;
+     opacity: 0.7;
+     position: absolute;
+     top: 50%;
+     width: 44px;
+ }
+#weather.error:before{
+    display:none;
+}
+#weather.error{
+    text-align:center;
+    font-size: 20px;
+}
+
+#weather.loaded #scroller,
+#weather.loaded .arrow{
+    display:block;
+}
+
+#weather.loaded:before{
+    display:none;
+}
+#weather.loaded{
+    border-radius:3px;
+    background:url('assets/img/weather_bg.png') no-repeat;
+    box-shadow:0 0 5px rgba(0,0,0,0.15);
+}
+#weather.first a.previous,
+#weather.last a.next{
+    display:none;
+}/*----------------------------
+	The Scroller
+-----------------------------*/
+#scroller{
+    position:absolute;
+    list-style:none;
+    width:100%;
+    height: 400px;
+    white-space:nowrap;
+    top:0;
+    left:0;
+}
+
+#scroller li{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    text-align:center;
+}
+#scroller li div{
+    padding:  3% 18% 0 20%;
+    width:180px;
+    height:200px;
+}
+
+#scroller li img{
+    display:block;
+}
+
+#scroller li .day{
+    font-size:20px;
+}
+
+#scroller li .day b{
+    font-weight:normal;
+    color:#000000;
+}
+
+#scroller li .cond{
+    color: #000000;
+    font-size: 24px;
+    position: absolute;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+#scroller li .cond b{
+    text-transform:uppercase;
+}
+
+#scroller, .arrow{
+    display:none;
+}
+
+/*------------------------------
+	The Next/Previous arrows
+-------------------------------*/
+.arrow{
+    background:url('assets/img/arrows.png') no-repeat;
+    width:34px;
+    height:45px;
+    position:absolute;
+    top:35%;
+    opacity:0.6;
+    overflow:hidden;
+    text-indent:-99999px;
+}
+
+.arrow:hover{
+    opacity:1;
+}
+
+.arrow.previous{
+    left:20px;
+}
+
+.arrow.next{
+    background-position:top right;
+    right:20px;
+}
+
+#third:before{
+    content: "";
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 80px solid #FFBC40;
+    position: absolute; left: 0; top: 0;
+}
+#third{
+    background-color: #FF9140;
+    height: 600px;
+}
+
+/*----------------------------
+	The Animation
+-----------------------------*/
+/* */
+.animated {
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    width: 200px;
+    height: 200px;
+}
+/* rotateIn Sun*/
+@-webkit-keyframes rotateInSun {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(360deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+
+}
+@keyframes rotateInSun {
+    0% {
+        transform-origin: center center;
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: center center;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+.rotateInSun {
+    -webkit-animation-name: rotateInSun;
+    animation-name: rotateInSun;
+}
+/* rotateIn Moon*/
+@-webkit-keyframes rotateInMoon {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes rotateInMoon {
+    0% {
+        transform-origin: center center;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: center center;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+.rotateInMoon {
+    -webkit-animation-name: rotateInMoon;
+    animation-name: rotateInMoon;
+}
+/*fadeInLeft clouds and fog*/
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+/*drizzle and thunderstorm rain*/
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+#cloudmini{
+    margin: -170px 0 0 0;
+    position: absolute
+}
+#moon{
+    position: absolute;
+    margin : -20px 0 0 0;
+}
+#moonRotate{
+    position: absolute;
+    margin : -20px 0 0px -40px;
+}
+#snow{
+    position: absolute;
+    padding: 0 30px;
+}
+#clouddrizzle{
+    position: absolute;
+    padding: 0 30px;
+}
+#rain{
+    position: absolute;
+
+}
+#thunderstorm{
+    position: absolute;
+    padding: 0 30px;
+}
+#fog{
+    position: absolute;
+    padding: 0 30px;
+}
+footer{
+    height: 70px;
+    background-color: #080B74;
+}
+.copyright{
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 2%;
+}
