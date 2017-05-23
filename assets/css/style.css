@@ -71,7 +71,7 @@ height: 400px;
 
 #weather.loaded #scroller,
 #weather.loaded .arrow{
-    display:block
+    display:block;
 }
 
 #weather.loaded:before{
